@@ -1,4 +1,4 @@
-import { input, select } from "@inquirer/prompts";
+import { input, select, confirm } from "@inquirer/prompts";
 import chalk from "chalk";
 
 export async function menu() {
@@ -39,5 +39,10 @@ export async function menu() {
     validate: (input) => input ? true : chalk.red("⚠️ El nombre del proyecto no puede estar vacío."),
   });
 
-  return { projectType, technology, projectName };
+  const install = await confirm({
+    message: chalk.blackBright("Deseas instalar los paquetes del proyecto?"),
+    default: true,
+  });
+
+  return { projectType, technology, projectName, install };
 }

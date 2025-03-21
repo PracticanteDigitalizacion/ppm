@@ -1,6 +1,6 @@
 {
-  "name": "ppm-create",
-  "version": "0.0.1",
+  "name": "ppm-cli-prebel",
+  "version": "0.0.3",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -9,16 +9,17 @@
   "keywords": [],
   "author": "Jamilton hoyos, Practicante Digitalizacion, Prebel",
   "license": "ISC",
-  "description": "Crear proyectos con ppm-create",
+  "description": "Prebel Package Manager",
   "dependencies": {
     "@inquirer/prompts": "7.4.0",
     "chalk": "5.4.1",
     "commander": "13.1.0",
     "degit": "2.8.4",
-    "fs-extra": "11.3.0"
+    "fs-extra": "11.3.0",
+    "update-notifier": "^7.3.1"
   },
   "bin": {
     "ppm-create": "./bin/ppm-create.js",
-    "ppm-install" : "./bin/ppm-install.js"
+    "ppm-install": "./bin/ppm-install.js"
   }
 }

@@ -16,7 +16,6 @@ export async function editPackageJson(projectPath, projectName) {
         const packageJson = await fs.readJson(packageJsonPath);
         packageJson.name = projectName;
         await fs.writeJson(packageJsonPath, packageJson, { spaces: 2 });
-        console.log(chalk.green("📦 package.json actualizado con el nuevo nombre"));
       } else {
         console.warn(chalk.yellow("⚠️ No se encontró package.json, omitiendo cambio de nombre."));
       }

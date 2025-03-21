@@ -13,5 +13,4 @@ export async function cloneRepo(repoUrl, projectPath) {
   execSync(`git clone ${repoUrl} "${tempPath}"`);
   await fs.remove(path.join(tempPath, ".git"));
   await fs.move(tempPath, projectPath, { overwrite: true });
-  console.log(chalk.green(`Proyecto creado en ${projectPath}`));
 }

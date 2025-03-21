@@ -1,4 +1,4 @@
-# 🚀 ppm-create
+# ppm-create
 
 **ppm-create** es una herramienta CLI que permite generar proyectos en diferentes tecnologias **con un templete basico** a partir de un repositorio privado de GitHub. Este CLI simplifica la configuración inicial del proyecto.
 
@@ -12,24 +12,15 @@
 
 ## 📦 **Instalación**
 
-📌 **Nota:** Aún no está publicado en npm, pero cuando lo esté, la instalación se hará con:
-
 ```sh
 npm install -g ppm
-```
-
-Por ahora, puedes probarlo localmente usando `npm link`:
-
-```sh
-cd ruta/del/proyecto
-npm link
 ```
 
 Esto creará un comando global llamado `ppm-create`.
 
 ---
 
-## 🚀 **Uso**
+## **Uso**
 
 Para crear un nuevo proyecto, simplemente ejecuta:
 
@@ -37,7 +28,9 @@ Para crear un nuevo proyecto, simplemente ejecuta:
 ppm-create
 ```
 
-El CLI te hará algunas preguntas: 1️⃣ **¿Qué tipo de proyecto quieres crear?** (Next.js, RPA, entre otros) 2️⃣ **Nombre del proyecto** (El nombre del directorio)
+El CLI te hará algunas preguntas:
+1️.**¿Qué tipo de proyecto quieres crear?** (Next.js, RPA, entre otros)
+2️.**Nombre del proyecto** (El nombre del directorio)
 
 Ejemplo:
 
@@ -58,32 +51,32 @@ El CLI creará un directorio `mi-app-next` con toda la configuración lista. �
 
 Dado que el CLI clona un repositorio privado, necesitas configurar un **Personal Access Token (PAT)** en GitHub con acceso a `repo`.
 
-### **🔹 Configuración en Windows (PowerShell)**
+### **Configuración en Windows (PowerShell)**
 
-Para que `API_TOKEN_GIT` esté siempre disponible, agrégalo al archivo `$PROFILE`:
+Para que `API_TOKEN` esté siempre disponible, agrégalo al archivo `$PROFILE`:
 
-1️⃣ **Abrir el archivo de perfil de PowerShell**:
+1️.**Abrir el archivo de perfil de PowerShell**:
 
 ```powershell
 notepad $PROFILE
 ```
 
-2️⃣ **Agregar la siguiente línea al final del archivo:**
+2️.**Agregar la siguiente línea al final del archivo:**
 
 ```powershell
-$env:API_TOKEN_GIT = "tu-token-github"
+$env:API_TOKEN = "tu-token-github"
 ```
 
-3️⃣ **Guardar y cerrar el archivo, luego ejecutar:**
+3️.**Guardar y cerrar el archivo, luego ejecutar:**
 
 ```powershell
 . $PROFILE
 ```
 
-🔹 **Verifica que la variable esté configurada correctamente:**
+**Verifica que la variable esté configurada correctamente:**
 
 ```powershell
-echo $env:API_TOKEN_GIT
+echo $env:API_TOKEN
 ```
 
 Si devuelve tu token, está todo listo. ✅
@@ -97,22 +90,22 @@ Si devuelve tu token, está todo listo. ✅
 
 - **Node.js** `>=14.x`
 - **Git instalado**
-- Un **Personal Access Token (PAT)** de GitHub con permisos `repo`
+- Un **Una variable de entorno** para el correcto funcionamineto de la aplicación
 
 ---
 
 ## 📌 **Solución de Problemas**
 
-🔹 ``
+``
 
 - Asegúrate de haber configurado la variable en PowerShell.
 - Reinicia la terminal después de modificar `$PROFILE`.
 - Prueba definir la variable temporalmente con:
   ```powershell
-  $env:API_TOKEN_GIT="tu-token-github"
+  $env:API_TOKEN="tu-token"
   ```
 
-🔹 ``
+``
 
 - Verifica que el proyecto no se clona en un subdirectorio inesperado.
 
@@ -120,13 +113,7 @@ Si devuelve tu token, está todo listo. ✅
 
 ## 📌 **Desinstalación**
 
-Si usaste `npm link`, puedes desinstalarlo con:
-
-```sh
-npm unlink -g ppm-create
-```
-
-Si en el futuro lo instalas desde npm, usa:
+Para desinstalar puedes utilizar
 
 ```sh
 npm uninstall -g ppm-create
@@ -140,4 +127,4 @@ MIT License 📄
 
 ---
 
-¡Ahora puedes crear proyectos en segundos con `ppm-create`! 🚀🔥
+¡Ahora puedes crear proyectos en segundos con `ppm-create`!
