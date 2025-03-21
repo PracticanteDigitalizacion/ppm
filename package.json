@@ -6,6 +6,39 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://github.com/PracticanteDigitalizacion/ppm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PracticanteDigitalizacion/ppm"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
   "keywords": [],
   "author": "Jamilton hoyos, Practicante Digitalizacion, Prebel",
   "license": "ISC",
@@ -21,5 +54,10 @@
   "bin": {
     "ppm-create": "./bin/ppm-create.js",
     "ppm-install": "./bin/ppm-install.js"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.2.3"
   }
 }

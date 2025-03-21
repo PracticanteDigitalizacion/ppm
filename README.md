@@ -1,6 +1,6 @@
 # ppm-create
 
-**ppm-create** es una herramienta CLI que permite generar proyectos en diferentes tecnologias **con un templete basico** a partir de un repositorio privado de GitHub. Este CLI simplifica la configuración inicial del proyecto.
+**ppm-create** es una herramienta CLI que permite generar proyectos en diferentes tecnologias **con un templete basico** a partir de un repositorio privado de GitHub. Este CLI simplifica la configuración inicial del proyecto para Prebel.
 
 ---
 
@@ -13,7 +13,7 @@
 ## 📦 **Instalación**
 
 ```sh
-npm install -g ppm
+npm install -g ppm-cli-prebel
 ```
 
 Esto creará un comando global llamado `ppm-create`.

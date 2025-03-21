@@ -15,7 +15,7 @@ import pkg from "../../package.json";
 const {API_TOKEN : token } = process.env;
 
 program
-  .version("0.0.3")
+  .version("0.0.4")
   .description("CLI para generar proyectos")
   .action(async () => {
     const notifier = updateNotifier({ pkg });
