@@ -8,7 +8,7 @@ export async function menu() {
 
   const frontTechnologies = [
     { name: chalk.gray("Next"), value: "nextjs" },
-    { name: chalk.gray("Vite"), value: "vite", disabled: true },
+    { name: chalk.gray("Vite"), value: "vite" },
   ]
 
   const backTechnologies = [

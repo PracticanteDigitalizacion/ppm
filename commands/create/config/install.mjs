@@ -1,6 +1,5 @@
 import chalk from "chalk";
 import { execSync } from "child_process";
-import { execArgv } from "process";
 
 const installationType = {
   npm: 'npm install',
