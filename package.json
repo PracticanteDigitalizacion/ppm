@@ -1,7 +1,7 @@
 {
   "name": "ppm-cli-prebel",
   "version": "0.0.4",
-  "main": "index.js",
+  "main": "index.mjs",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -52,8 +52,8 @@
     "update-notifier": "^7.3.1"
   },
   "bin": {
-    "ppm-create": "./bin/ppm-create.js",
-    "ppm-install": "./bin/ppm-install.js"
+    "ppm-create": "./bin/ppm-create.mjs",
+    "ppm-install": "./bin/ppm-install.mjs"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",

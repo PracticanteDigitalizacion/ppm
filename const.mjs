@@ -1,4 +1,4 @@
 export const TEMPLETE_PATH = { 
   nextjs: `/LaboratorioBia/TemplateFrontNext.git`,
-  vite : ""
+  vite : "/LaboratorioBia/TemplateFrontVite.git",
 }
