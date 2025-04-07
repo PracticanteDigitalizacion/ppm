@@ -1,6 +1,5 @@
 import { execSync } from "child_process";
 import path from "path";
-import chalk from "chalk";
 import fs from "fs-extra";
 import os from "os";
 
