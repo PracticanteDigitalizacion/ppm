@@ -12,8 +12,8 @@ export async function menu() {
   ]
 
   const backTechnologies = [
-    { name: chalk.gray("Flex"), value: "nest" },
-    { name: chalk.gray("DJango"), value: "fastify" },
+    { name: chalk.gray("DJango hexagonal"), value: "hexagonal" },
+    { name: chalk.gray("Flex"), value: "nest", disabled: true },
   ]
 
   const projectType = await select(
@@ -21,7 +21,7 @@ export async function menu() {
       message: chalk.blackBright("Que tipo de proyecto deseas crear?"),
       choices: [
         { name: chalk.grey("Front"), value: "front" },
-        { name: chalk.grey("Back"), value: "back", disabled: true },
+        { name: chalk.grey("Back"), value: "back" },
       ],
     }
   );

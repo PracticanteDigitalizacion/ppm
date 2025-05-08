@@ -40,7 +40,7 @@ program
         installPackages(projectPath, projectType, projectName);
       }
 
-      finalMessages(projectType, install);
+      finalMessages(projectType, install, projectName);
     } catch (error) {
       console.warn(chalk.red(error.message));
     }
