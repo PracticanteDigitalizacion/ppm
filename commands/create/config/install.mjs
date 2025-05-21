@@ -13,19 +13,22 @@ export function installPackages(projectPath, typeProject, projectName) {
 
   setTimeout(async () => {
     try {
-      console.log(projectPath);
-  
-
       const install = typeProject === "front" ? installationType.npm : installationType.pip
     
       console.log(chalk.green("Instalando paquetes..."));
-      execSync(`cd "${projectName}" && ${install}`, {
-        stdio: "inherit",
-      });
+
+      if (typeProject === 'front') {
+        execSync(`cd "${projectPath}" && ${install}`, {stdio: "inherit"})
+      }
+
     } catch (error) {
       console.warn(chalk.red(error.message));
     }
   }, 3000);
 
+
+}
+
+async function  installBack () {
 
 }

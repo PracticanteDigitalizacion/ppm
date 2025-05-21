@@ -13,7 +13,7 @@ export async function menu() {
 
   const backTechnologies = [
     { name: chalk.gray("DJango hexagonal"), value: "hexagonal" },
-    { name: chalk.gray("Flex"), value: "nest", disabled: true },
+    { name: chalk.gray("DJango capas"), value: "capas"},
   ]
 
   const projectType = await select(
@@ -38,11 +38,11 @@ export async function menu() {
     default: "my-project",
     validate: (input) => input ? true : chalk.red("⚠️ El nombre del proyecto no puede estar vacío."),
   });
-
-  const install = await confirm({
+  
+  const install = projectType === "front" ? await confirm({
     message: chalk.blackBright("Deseas instalar los paquetes del proyecto?"),
     default: true,
-  });
+  }) : false
 
   return { projectType, technology, projectName, install };
 }

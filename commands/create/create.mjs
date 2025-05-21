@@ -30,17 +30,17 @@ program
     const repoUrl = `https://${token}@github.com${reposUrl[technology]}`;
 
     try {
-      cloneRepo(repoUrl, projectPath);
+      await cloneRepo(repoUrl, projectPath);
 
       if (projectType === "front") {
-        editPackageJson(projectPath, projectName);
+        await editPackageJson(projectPath, projectName);
       }
 
       if (install) {
-        installPackages(projectPath, projectType, projectName);
+        await installPackages(projectPath, projectType, projectName);
       }
 
-      finalMessages(projectType, install, projectName);
+      await finalMessages(projectType, install, projectName);
     } catch (error) {
       console.warn(chalk.red(error.message));
     }
